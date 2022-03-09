@@ -26,7 +26,7 @@ function Board({ gameMap, level, onSquareClick }: BoardProps) {
     return <Box display="flex" flexWrap="nowrap" key={`square-row-${rowIndex}`}>{row}</Box>;
   }), [gameMap, level]); // eslint-disable-line react-hooks/exhaustive-deps
   
-  return <Box data-testid="board-wrapper" display="flex" flexDirection="row" justifyContent="center" alignItems="center">{gameBoard}</Box>;
+  return <Box data-testid="board-wrapper" display="flex" flexDirection="column" justifyContent="center" alignItems="center">{gameBoard}</Box>;
 }
 
 export default Board;
