@@ -1,16 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { ThemeProvider } from '@mui/material/styles';
 import './index.css';
 import App from './App';
 import { store } from './app/store';
-import { Provider } from 'react-redux';
+import theme from './app/theme';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
